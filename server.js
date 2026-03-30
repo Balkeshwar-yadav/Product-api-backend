@@ -8,6 +8,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+
+app.get('/',(req , res)=>{
+  res.render("index.ejs")
+})
+
 mongoose.connect("mongodb+srv://root:4089@cluster1.leuoiaz.mongodb.net/?appName=Cluster1",{
     dbName:"Product-list"
 })
