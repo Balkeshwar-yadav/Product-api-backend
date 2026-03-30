@@ -19,7 +19,8 @@ mongoose.connect("mongodb+srv://root:4089@cluster1.leuoiaz.mongodb.net/?appName=
 .then(()=> console.log("MongoDB Connected"));
 
 app.use("/api/products", productRoutes);
+const PORT = process.env.PORT || 5005;
 
-app.listen(5005, ()=>{
- console.log("Server running on port 5005");
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
