@@ -10,7 +10,7 @@ app.use(express.json());
 
 
 app.get('/',(req , res)=>{
-  res.render("index.ejs")
+  res.send("Api is running")
 })
 
 mongoose.connect("mongodb+srv://root:4089@cluster1.leuoiaz.mongodb.net/?appName=Cluster1",{
